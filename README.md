@@ -24,7 +24,19 @@ You can access the interactive Streamlit app here:
 ```bash
 git clone https://github.com/fidasaleem/Advertising_Sales.git
 cd Advertising_Sales
----
-2. **Install dependencies**:
+
+2. **Install dependencies:**
 ```bash
 pip install -r requirements.txt
+
+3. **Run the Streamlit app:**
+```bash
+streamlit run ad_sales.py
+
+## 📊 Project Highlights
+
+- Data preprocessing and cleaning
+- Exploratory Data Analysis (EDA) and visualizations
+- Predictive modeling for sales based on advertising channels
+- Interactive dashboard for stakeholders via Streamlit
+
