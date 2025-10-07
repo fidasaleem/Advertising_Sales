@@ -11,13 +11,6 @@ CodSoft_Sales/
 - Requiremnts.txt : Python dependencies
 - gb_model.pkl : Trained Gradient Boosting predictive model
 
-
-
-## 🚀 Live App
-
-You can access the interactive Streamlit app here:  
-[Live Streamlit App](https://advertisingsales-bddnemfmuwrqc9ivwxvuir.streamlit.app/)
-
 ---
 
 ## 💻 Running Locally
