@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
-import joblib
 import base64
+import cloudpickle
+
 
 st.set_page_config(page_title="Advertising Sales Prediction App", page_icon="📈", layout="wide")
 
@@ -34,19 +35,15 @@ This app predicts **product Sales** based on advertising expenditure across diff
 Trained using a **Gradient Boosting Regressor (R² ≈ 0.96)** for high accuracy.
 """)
 
-# ===============================
 # Load Pre-Trained Model
-# ===============================
-@st.cache_resource
 def load_model():
-    model = joblib.load("gb_model.pkl")
+    with open("gb_model.pkl", "rb") as f:
+        model = cloudpickle.load(f)
     return model
-
 model = load_model()
 
-# ===============================
+
 # Sidebar Inputs
-# ===============================
 st.sidebar.header("🧮 Enter Advertising Spend")
 tv = st.sidebar.number_input("💡 TV Advertising Budget ($)", min_value=0.0, step=1.0)
 radio = st.sidebar.number_input("📻 Radio Advertising Budget ($)", min_value=0.0, step=1.0)
@@ -59,9 +56,7 @@ input_data = pd.DataFrame({
     "Newspaper": [newspaper]
 })
 
-# ===============================
 # Prediction
-# ===============================
 if st.sidebar.button("🔮 Predict Sales"):
     predicted_sales = model.predict(input_data)[0]
 
