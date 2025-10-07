@@ -40,8 +40,6 @@ def load_model():
     try:
         with open("gb_model.pkl", "rb") as f:
             model = cloudpickle.load(f)
-        st.success("✅ Model loaded successfully!")
-        st.write("Model type:", type(model))
         return model
     except Exception as e:
         st.error(f"Failed to load model: {e}")
