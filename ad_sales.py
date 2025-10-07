@@ -35,7 +35,7 @@ This app predicts **product Sales** based on advertising expenditure across diff
 Trained using a **Gradient Boosting Regressor (R² ≈ 0.96)** for high accuracy.
 """)
 
-# ------------------ Load Pre-Trained Model ------------------
+
 def load_model():
     try:
         with open("gb_model.pkl", "rb") as f:
@@ -48,6 +48,7 @@ def load_model():
         return None
 
 model = load_model()
+
 
 # ------------------ Sidebar Inputs ------------------
 st.sidebar.header("🧮 Enter Advertising Spend")
