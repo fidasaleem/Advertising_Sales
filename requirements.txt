@@ -1,7 +1,8 @@
 streamlit
 pandas
 numpy
-scikit-learn
+scikit-learn==1.4.2
+cloudpickle==2.2.1
 matplotlib
 seaborn
 joblib
@@ -9,4 +10,3 @@ xgboost
 lightgbm
 catboost
 plotly
-cloudpickle
